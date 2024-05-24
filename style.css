@@ -12,7 +12,6 @@ body {
   box-shadow: -5px 5px 5px rgba(181, 179, 179, 0.498);
   /* padding: 10px 100px; */
   width: 600px;
-  height: 250px;
 }
 
 .todolist h1 {
@@ -43,7 +42,7 @@ body {
 }
 
 .todolist input:focus {
-  outline: none;
+  outline: 2px solid rgb(255, 230, 0);
 }
 
 .todolist input::placeholder {
@@ -55,6 +54,10 @@ li {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   list-style: none;
   position: relative;
+  margin-bottom: 10px;
+}
+li:not(:first-of-type) {
+  cursor: pointer;
 }
 li::before {
   content: "*";
