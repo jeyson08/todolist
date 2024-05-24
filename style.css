@@ -60,10 +60,33 @@ li:not(:first-of-type) {
   cursor: pointer;
 }
 li::before {
-  content: "*";
+  content: "✻";
   color: rgb(255, 89, 0);
-  font-size: 2rem;
-  position: absolute;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  /* position: absolute;
   left: -20px;
-  top: -3px;
+  top: -3px; */
+}
+
+li:not(:first-of-type, .modified):hover::after {
+  content: "(Terminer)";
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+li.modified::before {
+  content: "✓";
+  color: rgb(255, 89, 0);
+  font-size: 1.2rem;
+}
+
+li.modified:hover::after {
+  content: "(Supprimer)";
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-left: 10px;
 }

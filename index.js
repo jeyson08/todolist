@@ -11,7 +11,11 @@ document.addEventListener("keypress", (e) => {
     input.value = "";
     // input.blur(); Enleve le focus
     li.addEventListener("click", (e) => {
-      ul.removeChild(e.target);
+      //   ul.removeChild(e.target);
+      li.classList.add("modified");
+      li.addEventListener("click", (e) => {
+        ul.removeChild(e.target);
+      });
     });
   }
 });
