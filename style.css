@@ -1,0 +1,66 @@
+body {
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(255, 89, 0), rgb(227, 171, 66));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist {
+  background: linear-gradient(90deg, rgb(0, 255, 217), rgb(41, 183, 231));
+  border-radius: 30px;
+  box-shadow: -5px 5px 5px rgba(181, 179, 179, 0.498);
+  /* padding: 10px 100px; */
+  width: 600px;
+  height: 250px;
+}
+
+.todolist h1 {
+  color: rgb(51, 49, 49);
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: -2px 2px rgb(255, 89, 0);
+  font-size: 2.5rem;
+}
+
+.todolist input {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 30%;
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  color: rgb(228, 246, 243);
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgb(255, 89, 0), rgb(227, 171, 66));
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.todolist input:focus {
+  outline: none;
+}
+
+.todolist input::placeholder {
+  opacity: 1;
+}
+
+li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  list-style: none;
+  position: relative;
+}
+li::before {
+  content: "*";
+  color: rgb(255, 89, 0);
+  font-size: 2rem;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
